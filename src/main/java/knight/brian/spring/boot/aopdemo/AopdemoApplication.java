@@ -22,7 +22,10 @@ public class AopdemoApplication {
 	}
 
 	private void demoTheBeforeAdvice(AccountDAO accountDAO, MembershipDAO membershipDAO) {
-		accountDAO.addAccount(new Account(), true);
+		Account myAccount = new Account();
+		myAccount.setName("Brian");
+		myAccount.setLevel("Red");
+		accountDAO.addAccount(myAccount, true);
 		accountDAO.doWork();
 
 		accountDAO.setName("foobar");
